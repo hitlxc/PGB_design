@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>complete</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="./jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="./PGB.js"></script>
+	<link rel="stylesheet" type="text/css" href="./PGB.css" />
+	<link rel="stylesheet" type="text/css" href="./pure/pure-min.css" />
+</head>
+<body>
+	<nav>
+		<div style="width:100%;text-align:center">
+			<form class="pure-form pure-u-4-9" id="form" >
+				Chromosome 22 
+				<input type="text" id="from" name="from" placeholder="起点">
+				<input type="text" id="to" name="to" placeholder="终点">
+			</form>
+		</div>
+		<div style="width:100%;text-align:center">
+			<style scoped>
+				.button-secondary {
+			    	color: white;
+			        border-radius: 4px;
+			        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+			   		background: rgb(66, 184, 221); /* this is a light blue */
+			    }
+			</style>
+				<button  class="button-secondary pure-button" name="submit" id="submit" >确定</button> 
+		        <button  class="button-secondary pure-button" id="enlarge" name="enlarge">放大</button>
+		        <button  class="button-secondary pure-button" id="shrink" name="shrink ">缩小</button>
+	    </div>
+    </nav>
+    <div class="pure-u-1-5"></div>
+    <div class="pure-u-3-5" id="coordinates">
+    	<span id="start">起点<span id="startNumber"></span></span>
+    	<span id="end">终点<span id="endNumber"></span></span>
+    </div>
+    <div class="pure-u-1-6" ></div>
+    <div class="pure-u-1-5" id="tagging">
+    	<div id="tag1"><span>sequnce</span></div>
+    	<div id="tag2"><span>values</span></div>
+    	<div id="tag3"><span>elements</span></div>
+    	<div id="tag4"><span>reads</span></div>
+    	<div id="tag5"><span>variants</span></div>
+    </div>
+    <div class="pure-u-3-5" id="div">
+    	<div id="container"   onmouseover='move()'>
+	    	<canvas id="sequence"  width="30000" height="30"></canvas>
+	    	<canvas id="values"  width="30000" height="100"></canvas>
+	    	<canvas id="elements"  width="30000" height="150"></canvas>
+	    	<canvas id="reads"  width="30000" height="150"></canvas>
+	    	<canvas id="variants"  width="30000" height="100"></canvas>
+	    </div>
+	</div>
+	<div class="pure-u-1-6" id="explain">
+    	<div id="explain1"><canvas height="30" width="100" id="explainSequence"></canvas></div>
+    	<div id="explain2"></div>
+    	<div id="explain3"><canvas height="100" width="100" id="explainElements"></div>
+    	<div id="explain4"><span>阅读框</span></div>
+    	<div id="explain5"><span>变异</span></div>
+    </div>
+    <script type="text/javascript">
+    	var canvas = document.getElementById("explainSequence")
+    	var context = canvas.getContext("2d");
+        context.fillStyle = "#EC6F4B";
+		context.fillRect(0,0,20,10);
+		context.font = "bold 10px Arial"
+        context.fillText("A",30,10);
+        context.fillStyle = "#857AB9";
+        context.fillRect(50,0,20,10);
+        context.fillText("T",80,10);
+        context.fillStyle = "#F9C238";
+		context.fillRect(0,20,20,10);
+        context.fillText("G",30,30);
+        context.fillStyle = "#7AC583";
+        context.fillRect(50,20,20,10);
+        context.fillText("C",80,30);
+
+        var canvas = document.getElementById("explainElements")
+    	var context = canvas.getContext("2d");
+    	context.fillStyle = "rgb(0,250,0)";
+    	context.fillRect(0, 0, 40, 20);
+    	context.fillText("内含子",50,10);
+    	context.fillStyle = "rgb(0,0,250)";
+    	context.fillRect(0, 30, 40, 20);
+    	context.fillText("编码区",50,40);
+    	context.fillStyle = "rgb(250,0,0)";
+    	context.fillRect(0, 60, 40, 20);
+    	context.fillText("不翻译区",50,70);
+    </script>
+</body>
+</html>

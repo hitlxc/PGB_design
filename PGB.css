@@ -1,0 +1,68 @@
+#div{
+    margin-top: 10px;
+    height: 1500px;
+    border: solid 1px;
+    overflow: hidden;
+    position: relative;
+}
+
+#end{
+    float: right;
+}
+
+#tagging,#explain{
+    margin-top: 10px;
+    height: 1500px;
+    
+}
+#tagging{
+    text-align: right;
+}
+#sequence{
+    margin-top:20px;          
+}
+
+#form{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+#tag1,#explain1{
+    margin-top:20px;     
+}
+
+#tag3,#explain3{
+    margin-top:110px;    
+}
+
+#tag4{
+    margin-top:110px;    
+}
+
+#explain4{
+    margin-top:78px; 
+}
+
+#tag5,#explain5{
+    margin-top:110px;    
+}
+
+#tag2,#explain2{
+    margin-top: 45px;
+}
+
+.button-secondary{
+    background: rgb(66, 184, 221); /* this is a light blue */
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+#container{
+    position: relative;
+}
+
+body{
+    background-color: #BBFFEE;
+}

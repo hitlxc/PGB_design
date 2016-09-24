@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<root>
+	<Assembly id="hg19">
+		<Anno id="Reference" group="Basic">
+			<Path>E:\program\apache-tomcat-9.0.0.M8\webapps\PGB_design\gb_design/chr22.fa</Path>
+			<Default>pack</Default>
+			<Format>REF</Format>
+		</Anno>
+		<Anno id="refGene" group="Gene">
+			<Path>E:\program\apache-tomcat-9.0.0.M8\webapps\PGB_design\gb_design\refGene.hg19.chr22.sorted.bb</Path>
+			<Default>pack</Default>
+			<Format>BB</Format>
+		</Anno>
+		<Anno id="NA12716_RNAseq" group="Data">
+			<Path>E:\program\apache-tomcat-9.0.0.M8\webapps\PGB_design\gb_design\NA12716.hg19.chr22.sorted.slim.bam</Path>
+			<Default>pack</Default>
+			<Format>BAM</Format>
+		</Anno>
+		<Anno id="NA12716" group="Variant">
+			<Path>E:\program\apache-tomcat-9.0.0.M8\webapps\PGB_design\gb_design\NA12716.hg19.chr22.vcf.gz</Path>
+			<Default>pack</Default>
+			<Format>VCF</Format>
+		</Anno>
+		<Anno id="phyloP_placental" group="Conservation">
+			<Path key="chr22">E:\program\apache-tomcat-9.0.0.M8\webapps\PGB_design\gb_design\chr22.phyloP46way.placental.bw</Path>
+			<Default>pack</Default>
+			<Format>BW</Format>
+		</Anno>
+	</Assembly>
+</root>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>基因浏览器ajax</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+	<style type="text/css">
+		#div{
+			height: 800px;
+			width: 800px;
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+	<button>向页面发送 HTTP GET 请求，然后获得返回的结果</button>
+	<div id="div"></div>
+	<script type="text/javascript">
+		//$(document).ready(function(){
+			
+
+		    var xmldata = "data"
+		    $("button").click(function(){
+		  		var querry="action="+"update"+"&chr="+"chr22"+"&start="+"40985620"+"&end="+"40985820";
+		    	$.get("servlet/test.do?"+querry,function(data,status){
+			      	alert("数据：" + data + "\n状态：" + status);
+			      	document.write(data);
+			      	xmldata = (data);
+			      	alert($(xmldata).find("Start").contents()[0].data)
+		    	});
+		  	});
+		//});
+
+	</script>
+</body>
+</html>

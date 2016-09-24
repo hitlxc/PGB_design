@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+var sequenceData = "0"
+
+function ajax(){
+	$.get("servlet/test.do?"+"action="+"update"+"&chr="+"chr22"+"&start="+"30000000"+"&end="+"30001499",function(data,status){
+        xmldata = data;
+        sequenceData = sequenceData + $(xmldata).find("Sequence").contents()[0].data;
+    })
+}
+
+function print(){
+	console.log(sequenceData)
+}
+
+ajax()
+setTimeout(print,2000)
+
+
+</script>
+</body>
+</html>
